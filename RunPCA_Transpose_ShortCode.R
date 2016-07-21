@@ -24,7 +24,7 @@ for (i in 1:4) {
     setwd("C:/Work/AbbyF/Oliver/PC_outputs_R_T/")
     prmatrix <- rasterT%*%raster.pr$rotation
     spatial<-data.frame(cbind(coords,raster.pr$rotation))
-    #rotation is now spatial series - tack on coordinates so this file can be mapped
+    #rotation is now spatial series - tack on coordinates so this file can be mapped...
     
     write.table(prmatrix, file = paste(isl,seas,"timeseries.csv",sep=""), sep = ",")
     write.table(spatial[,1:12], file = paste(isl,seas,"spatial_pr.csv",sep=""), sep = ",", col.names = T,row.names=F)
